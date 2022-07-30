@@ -37,8 +37,8 @@ img{
 .main{
     width: 75%;
 }
-.education h1,
-.experience h1{
+.education .heading,
+.experience .heading{
     border-bottom: 1px solid #000;
     margin-top: 1em;
     padding: 0.25em;
