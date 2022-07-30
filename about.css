@@ -1,20 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&family=Cormorant+Garamond:wght@400;500&family=Courier+Prime&family=EB+Garamond:wght@500&family=Fontdiner+Swanky&family=Ibarra+Real+Nova:wght@500&family=Merriweather:wght@300&display=swap');
+
+img{
+    width: 100%;
+}
 .content{
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .aside{
     height: 70%;
-    width: 160px;
+    width: 20%;
     /* position: fixed; */
     z-index: 1;
-    /* background-color: #111; */
     overflow-x: hidden;
     padding-top: 20px;
+    text-align: center;
+}
+.aside h3{
+    border-bottom: 1px solid #000;
+    margin: 1em;
 }
 .aside a{
     display: block;
+    font-family: 'Courier Prime', monospace;
+    color: #333;
+    padding: 0.5em;
+    letter-spacing: 1px;
+
+}
+.aside a:hover{
+    transform: scale(1.1);
+    
 }
 
+.main{
+    width: 75%;
+}
+.education h1,
+.experience h1{
+    border-bottom: 1px solid #000;
+    margin-top: 1em;
+    padding: 0.25em;
+}
+.card{
+    display: flex;
+    padding: 2em;
+    margin: 1em auto;
+    border-radius: 10px;
+}
+.card:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.card-left{
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 1em;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+.card-right{
+    margin: 1em;
+}
+@media screen and (max-width:750px) {
+    .card{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .card-left{
+        margin: 0 auto
+    }
+    .card-right{
+        text-align: center;
+    }
+
+}
 
 
 
