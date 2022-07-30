@@ -1,0 +1,59 @@
+.content{
+    display: flex;
+    align-items: center;
+}
+.aside{
+    height: 70%;
+    width: 160px;
+    /* position: fixed; */
+    z-index: 1;
+    /* background-color: #111; */
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.aside a{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3em 0;
+    color: #A4A4A4;
+    font-size: 1em;
+}
+.footer h3{
+    font-family: 'Ibarra Real Nova', serif;
+    padding-top: 0.25em;
+    font-weight: 300; 
+}
+.footer h3 a{
+    font-size: 2em;
+    font-weight: 700;
+    color: #000;
+    font-family: 'Babylonica', cursive;
+}
+
+.footer h3 a:hover{
+    border-bottom: 1px solid #000;
+    color: #A4A4A4;
+}

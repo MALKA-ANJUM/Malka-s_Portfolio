@@ -5,22 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Malka Anjum</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="shortcut icon" href="malka.png" type="image/x-icon">
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">
-            <a href="#">malkaAnjum</a>
+    <div class="container">
+        <div class="navbar">
+            <!-- Navbar logo -->
+            <div class="nav-header">
+                <div class="nav-logo">
+                    <a href="#">&lt;malkaAnjum/&gt;</a>
+              </div>
+            </div>
+         
+            <!-- responsive navbar toggle button -->
+            <input type="checkbox" id="nav-check">
+            <div class="nav-btn">
+              <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+            </div>
+         
+            <!-- Navbar items -->
+            <div class="nav-links">
+                <a href="index.html">Projects</a>
+                <div class="dropdown">
+                    <a class="dropBtn" href="about.html">About</a>
+                    <div class="drop-content">
+                        <a href="#">Experience</a>
+                        <a href="#">Education</a>
+                        <a href="#">Skills</a>   
+                        <a href="#">Contact</a>              
+                    </div>
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">projects</a></li>
-                <li><a href="#">about</a></li>
-            </ul>
-        </nav>
-    </div>
 
     <div class="title">
         <h1>Hello! I'm Malka Anjum.</h1>
+    </div>
+
+    <div class="content">
+        <div class="aside">
+            <h3>FIND ME</h3>
+            <a href="https://www.linkedin.com/in/malka-anjum-419587157/">Linkedin</a>
+            <a href="https://github.com/MALKA-ANJUM">GitHub</a>
+            <a href="https://medium.com/@malkaanjum1999">Medium</a>
+            <a href="Malka's Resume (3).pdf">CV</a>
+        </div>
+        <div class="main">
+            Experience
+        </div>
+    </div>
+    <div class="footer">
+        <div class="photo">
+            <img src="malka.png" alt="" width="500px">
+        </div>
+        <div class="text">
+            <h3>Back to <a href="index.html">Projects.</a></h3>
+        </div>
     </div>
 </body>
 </html>

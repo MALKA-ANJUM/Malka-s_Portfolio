@@ -19,14 +19,184 @@ img{
   margin: 0 auto;
    
 }
+
+
+
+
+
 .navbar{
+    height: 70px;
+    width: 100%;
+    padding: 19px 30px;
+    position: relative;
+  }
+  .navbar .nav-header{
+    display: inline;
+  }
+  .navbar .nav-header .nav-logo{
+    display: inline-block;
+    margin-top: -7px;
+    font-family: 'Babylonica', cursive;
+    font-size: 3em;
+  }
+  .navbar .nav-links{
+    display: inline;
+    float: right;
+    font-size: 1em;
+    font-family: 'Merriweather', serif;
+  }
+   
+  .navbar .nav-links .loginBtn{
+    display: inline-block;
+    padding: 5px 15px;
+    margin-left: 20px;
+    font-size: 17px;
+    color: rgb(9, 14, 90);
+  }
+  .navbar .nav-links a {
+    padding: 10px 12px;
+    text-decoration: none;
+    font-weight: 550;
+  }
+  /* Hover effects */
+  .navbar .nav-links a:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+   
+  /* responsive navbar toggle button */
+  .navbar #nav-check, .navbar .nav-btn{
+    display: none;
+  }
+   
+  @media (max-width:700px) {
+    .navbar .nav-btn{
+      display: inline-block;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+    .navbar .nav-btn label {
+      display: inline-block;
+      width: 80px;
+      height: 70px;
+      padding: 25px;
+    }
+    .navbar .nav-btn label span {
+      display: block;
+      height: 10px;
+      width: 25px;
+      border-top: 3px solid crimson;
+    }
+    .navbar .nav-btn label:hover, .navbar #nav-check:checked ~ .nav-btn label {
+      background-color: rgb(9, 14, 90);
+      transition: all 0.5s ease;
+    }
+    .navbar .nav-links{
+      position: absolute;
+      display: block;
+      text-align: center;
+      width: 50%;
+      background-color: rgb(9, 14, 90);
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 70px;
+      right: 0px;
+    }
+    .navbar .nav-links a {
+      display: block;
+    }
+   
+    /* when nav toggle button not checked */
+    .navbar #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+   
+    /* when nav toggle button is checked */
+    .navbar #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 70px);
+      overflow-y: auto;
+    }
+    .navbar .nav-links .loginBtn {
+      padding: 10px 40px ;
+      margin: 20px;
+      font-size:  18px;
+      font-weight: bold;
+      color: rgb(9, 14, 90);
+    }
+    /* Responsive dropdown code */
+    .navbar .nav-links .dropdown, .navbar .nav-links .dropdown2 {
+      float: none;
+      width: 100%;
+    }
+    .navbar .nav-links .drop-content, .navbar .nav-links .drop-content2 {
+      position: relative;
+      background-color: rgb(220, 220, 250);
+      top: 0px;
+      left: 0px;
+    }
+    /* Text color */
+    .navbar .nav-links .drop-content a {
+      color: rgb(9, 14, 90);
+    }  
+   
+  }
+   
+  /* Dropdown menu CSS code */
+  .dropdown{
+    position: relative;
+    display: inline-block;
+  }
+  .drop-content, .drop-content2 {
+    display: none;
+    position: absolute;
+    background-color: #1b4cd3;
+    min-width: 120px;
+    font-size: 16px;
+    top: 34px;
+    z-index: 1;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+  }
+  /* on hover show dropdown */
+  .dropdown:hover .drop-content, .dropdown2:hover .drop-content2 {
+    display: block;
+  }
+  /* drondown links */
+  .drop-content a {
+    padding: 12px 10px;
+    border-bottom: 1px solid rgb(197, 197, 250);
+    display: block;
+    transition: all 0.5s ease !important;
+  }
+  .dropBtn .drop-content a:hover {
+    background-color: rgb(230, 230, 230);
+  }
+  .dropdown:hover .dropBtn, .dropdown2:hover .dropBtn2 {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .dropdown2 .drop-content2 {
+    position: absolute;
+    left: 120px;
+    top: 126px;
+  }
+  .dropBtn2 i {
+    margin-left: 15px;
+  }
+
+
+
+
+
+
+
+
+
+
+/* .navbar{
     display: flex;
     justify-content: space-between;
     position: fixed;
-
     max-width: 1500px;
     width: 90%;
-    /* border: 1px solid red; */
     background: transparent;
     padding: 2em 0;
    z-index: 10;
@@ -58,13 +228,11 @@ nav ul li a{
 }
 nav ul li a:hover{
     color: #777777;
-}
-main{
-    padding-top: 8em;
-}
+} */
+
 .title {
     /* border: 1px solid red; */
-    padding: 2.5em 0;
+    padding: 2em 0;
     max-width: 1100px;
     width: 100%;
     
@@ -87,12 +255,31 @@ h3{
 .projects {
     display: grid;
     grid-template-columns: auto auto;
+    margin: 3em 0;
+}
+footer{
+  padding: 3em 0;
+  color: #A4A4A4;
+  font-size: 1em;
 }
 footer p {
     font-family: 'Courier Prime', monospace;
 }
 footer h3{
     font-family: 'Ibarra Real Nova', serif;
+    padding-top: 0.25em;
+    font-weight: 300;
+   
+}
+footer h3 a{
+  font-size: 2em;
+  font-weight: 700;
+  color: #000;
+  font-family: 'Babylonica', cursive;
+}
+footer h3 a:hover{
+  border-bottom: 1px solid #000;
+  color: #A4A4A4;
 }
 .reveal{
 
@@ -116,6 +303,9 @@ footer h3{
     
 }
 .projects img:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     
+}
+.project h3{
+  font-size: 1.5em;
 }
